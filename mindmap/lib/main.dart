@@ -127,14 +127,20 @@ class _MindMapPageState extends State<MindMapPage> {
     );
   }
 
-  void _addNode() {
-    if (_nodeTitleController.text.isNotEmpty) {
-      setState(() {
-        _nodes.add(MindMapNode(title: _nodeTitleController.text));
-        _nodeTitleController.clear();
-      });
-    }
+void _addNode() {
+  if (_nodeTitleController.text.isNotEmpty) {
+    String newNodeId = DateTime.now().millisecondsSinceEpoch.toString();  // Simple ID generation
+    setState(() {
+      _nodes.add(MindMapNode(
+        id: newNodeId,
+        title: _nodeTitleController.text,
+        description: 'Description for ${_nodeTitleController.text}',  // Example description
+        color: Colors.primaries[_nodes.length % Colors.primaries.length],  // Cycle through colors
+      ));
+      _nodeTitleController.clear();
+    });
   }
+}
 
   void _editNode(BuildContext context, int index) {
     _nodeTitleController.text = _nodes[index].title;
