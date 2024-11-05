@@ -1,7 +1,6 @@
 class Node {
-  String id;
   String title;
-  List<Node> children;
+  int? parentId; // Use this to establish parent-child relationships
 
-  Node({required this.id, required this.title, this.children = const []});
+  Node({required this.title, this.parentId});
 }
