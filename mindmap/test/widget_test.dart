@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mindmap/main.dart';  // Ensure this is the correct path to your main app file
+import 'package:mind_mapping_tool/main.dart';  // Ensure this is the correct path to your main app file
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());  // Replace MyApp with the correct widget class name if necessary
+    await tester.pumpWidget( MyApp());  // Replace MyApp with the correct widget class name if necessary
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
