@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mind Mapping Tool',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+           primarySwatch: Colors.blue,
       ),
       home: LoginPage(),
     );
