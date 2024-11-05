@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'pages/mind_map_page.dart';
 
 void main() {
-  runApp(MindMappingApp());
+  runApp(MyApp());
 }
 
-class MindMappingApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

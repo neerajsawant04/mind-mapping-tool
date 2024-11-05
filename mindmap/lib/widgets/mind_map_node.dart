@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../models/node.dart';
-import 'node_connector.dart';
 
 class MindMapNode extends StatelessWidget {
   final Node node;
